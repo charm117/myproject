@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+
+		
+        <script src="https://www.jq22.com/jquery/vue2.6.10.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/shop.css"/>
+		
+	</head>
+	<body>
+		<!--头部-->
+		<div id="top">
+			<div id="v-top1">
+				<a href="index.html" title="小米官网">
+			    </a>
+			</div>
+			<div id="v-top2">
+				<span class="sp1">我的购物车</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+			    <span class="sp2">温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span>
+			</div>
+			<div id="v-top3">
+				<a href="">登录</a>
+				&nbsp;&nbsp;
+				<span>|</span>
+				&nbsp;&nbsp;
+				<a href="">注册</a>
+			</div>
+		</div>
+		<hr />
+	 <!--购物车商品table-->
+	 <div id="app">
+     <div class="shoppingBar">
+       <h2>购物清单</h2>
+       <table>
+           <tr>
+           <th>
+             <input type="checkbox" @change="checkedAll($event)">
+                       全选
+          </th>
+           <th>商品名称</th>
+           <th>数量</th>
+           <th>单价（元）</th>
+           <th>金额（元）</th>
+           <th>操作</th>
+         </tr>
+         <!--接受商品数据vue-->
+         <tr v-for="(item, index) in goods" class="commodity">
+          <th>
+            <input v-model="item.isSel" type="checkbox" class="input">
+           </th>
+          <th class="content">
+             <img :src="item.image" width="100px" height="100px">
+             <p>{{item.name}}</p>
+          </th>
+           <th>
+            <button type="button" @click="decrease(index)">-</button>
+             <span>{{item.count}}</span>
+             <button type="button" @click="add(index)">+</button>
+          </th>
+          <th>{{item.price}}</th>
+           <th class="money">{{item.price * item.count}}</th>
+           <th>
+            <span id="delete" @click="deleteThis(index)" class="glyphicon glyphicon-remove"></span>
+          </th>
+         </tr>
+ 
+      </table>
+ 
+       <div class="shoppingBar-footer">
+        <div class="manage">
+           <span class="delAll" @click="deleteSelected">删除所选商品</span>
+           <span class="return">继续购物</span>
+       </div>
+ 
+         <button id="go" type="button">去结算</button>
+ 
+         <div class="buy">
+           <span>{{countAll}}</span>
+           件商品总计:
+           <span>￥{{totalPrice}}</span>
+         </div>
+       </div>
+    </div>
+   </div>
+	<script type="text/javascript" src="js/shop.js"></script>
+	<!--商品-->
+	<div id="box">
+	<p class="spn">
+		买购物车中商品的人还买了
+	</p>
+	</div>
+	<div id="imgbox">
+		<div class="img box1">
+			<a href=""><img src="img/shop/20201103084438.png"/></a>
+			<div class="com">
+			<div class="car" @click="addToCart(index)">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box2">
+			<a href=""><img src="img/shop/20201103084450.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box3">
+			<a href=""><img src="img/shop/20201103084459.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box4">
+			<a href=""><img src="img/shop/20201103084506.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box5">
+			<a href=""><img src="img/shop/20201103084514.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box6"><a href=""><img src="img/shop/20201103084523.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box7"><a href=""><img src="img/shop/20201103084531.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box8"><a href=""><img src="img/shop/20201103084539.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box9"><a href=""><img src="img/shop/20201103084601.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+		<div class="img box10"><a href=""><img src="img/shop/20201103084608.png"/></a>
+			<div class="com">
+			<div class="car">
+				<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" title="点击加入购物车"></span>
+			</div>
+        </div>
+		</div>
+	</div>
+	<!--商品尾部-->
+	<div id="end">
+		<img src="img/shop/20201103091557.png"/>
+	</div>
+	</body>
+</html>

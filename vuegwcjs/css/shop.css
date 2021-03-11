@@ -1,0 +1,586 @@
+body{
+	margin: 0;
+	padding: 0;
+	height: auto;
+	text-decoration: none;
+	list-style: none;
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+/*头部样式*/
+#top{
+	width: 100%;
+	height: 105px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+}
+#v-top1{
+	width: 48px;
+	height: 48px;
+	margin: 30px 200px;
+	float: left;
+}
+#v-top1 img{
+	width: 48px;
+	height: 48px;
+}
+#v-top2{
+	width: 600px;
+	height: 50px;
+	float: left;
+	margin: 30px -150px;
+}
+#v-top2>.sp1{
+	font-family: "微软雅黑";
+	font-size: 28px;
+	color: #424242;
+}
+#v-top2>.sp2{
+	color: #757575;
+}
+#v-top3{
+	width: 150px;
+	height: 105px;
+	float: right;
+	margin-right: 120px;
+}
+#v-top3 a{
+	text-decoration: none;
+	color: #757575;
+	line-height: 105px;
+}
+#v-top3 a:hover{
+	color: #FF6700;
+}
+hr{
+	width: 100%;
+	height: 2px;
+	background-color: #FF6700;
+}
+/*购物车商品样式*/
+ .shoppingBar {
+      width: 1130px;
+      border: 2px solid #F5F5F5;
+      margin: 40px auto;
+      position: relative;
+      background-color: white;
+      font-size: 16px;
+    }
+
+    .shoppingBar h2 {
+      height: 60px;
+      line-height: 60px;
+      color: black;
+      text-indent: 40px;
+    }
+    .shoppingBar table {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .shoppingBar table .money{
+    	color: red;
+    }
+    .shoppingBar table .commodity{
+    	border: 3px solid #F5F5F5;
+    	height: 150px;
+    }
+    .shoppingBar>table tr th input{
+    	width: 25px;
+    	height: 25px;
+    	margin-left: 30px;
+    }
+    .shoppingBar table tr:first-of-type {
+      height: 80px;
+      color: #424242;
+      font-size: 14px;
+      border-top: 1px solid #F5F5F5;
+      border-bottom: 1px solid #F5F5F5;
+    }
+    .shoppingBar table tr th img {
+      width: 120px;
+      height: 100px;
+      float: left;
+    }
+
+    .shoppingBar table tr th p {
+      float: right;
+      width: 100px;
+      font-size: 18px;
+      color: #424242;
+    }
+
+    .shoppingBar table tr .content {
+      width: 220px;
+      padding: 0 100px;
+    }
+
+    .shoppingBar table tr #delete {
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    .shoppingBar table tr #delete:hover{
+    	color: red;
+    }
+    
+    .shoppingBar .shoppingBar-footer {
+      border: 1px solid #F5F5F5;
+      width: 1130px;
+      height: 60px;
+      position: absolute;
+      margin-top: 10px;
+      color: #757575;
+      font-size: 14px;
+      background-color: white;
+    }
+
+    .shoppingBar .shoppingBar-footer .manage {
+      float: left;
+      height: 40px;
+    }
+
+    .shoppingBar .shoppingBar-footer .manage .delAll,
+    .return { 
+      cursor: pointer;
+      background: #F5F5F5;
+      color: #757575;
+      line-height: 60px;
+      margin: 0px 30px;
+    }
+    .shoppingBar .shoppingBar-footer .manage .delAll,
+    .return:hover{
+    	color: #FF6700;
+    	transition: all 0.5s ease-in-out; 
+    }
+    .shoppingBar .shoppingBar-footer .buy {
+      float: right;
+      height: 40px;
+      line-height: 60px;
+    }
+
+    .shoppingBar .shoppingBar-footer #go {
+      float: right;
+      height: 60px;
+      width: 110px;
+      font-weight: 400;
+      font-size: 18px;
+      outline: none;
+      background-color: #E0E0E0;
+      border: none;
+      border-radius: 2px;
+      margin-left: 10px;
+      cursor: pointer;
+      color: white;
+    }
+    .shoppingBar .shoppingBar-footer .active{
+    	background-color: #FF6700;
+    }
+    .shoppingBar .shoppingBar-footer .buy span {
+      font-weight: bold;
+      font-size: 30px;
+      color: red;
+    }
+    .shoppingBar .shoppingBar-footer #go:hover{
+    	background-color: red;
+    	transition: all 0.5s ease 0s;
+    }
+/*商品css*/
+    #box{
+    	position: relative;
+    	width: 480px;
+    	height: 40px;
+    	margin: 120px auto;
+    }
+    .spn{
+    	font-size: 30px;
+    	color: #757575;
+    	text-align: center;
+    }
+    #imgbox{
+    	width: 1130px;
+    	height: 630px;
+    	background-color: #F5F5F5;
+    	margin: -60px auto;
+    }
+    #imgbox>.img{
+    	position: relative;
+    	width: 220px;
+    	height: 300px;
+    	background-color: #FFFFFF;
+    	float: left;
+    	margin: 8px 3px;
+    }
+    /*阴影盒子box1*/
+    .box1>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box1>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box1>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box1:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box1:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box1>.com>.car:hover{
+    	background-color: red;
+    }
+    /*阴影盒子box2*/
+   .box2>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box2>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box2>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box2:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box2:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box2>.com>.car:hover{
+    	background-color: red;
+    }
+    /*阴影盒子box3*/
+   .box3>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box3>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box3>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box3:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box3:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box3>.com>.car:hover{
+    	background-color: red;
+    }
+   /*阴影盒子box4*/
+  .box4>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box4>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box4>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box4:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box4:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box4>.com>.car:hover{
+    	background-color: red;
+    }
+  /*阴影盒子box5*/
+ .box5>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box5>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box5>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box5:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box5:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box5>.com>.car:hover{
+    	background-color: red;
+    }
+ /*阴影盒子box6*/
+.box6>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box6>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box6>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box6:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box6:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box6>.com>.car:hover{
+    	background-color: red;
+    }
+/*阴影盒子box7*/
+    .box7>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box7>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box7>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box7:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box7:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box7>.com>.car:hover{
+    	background-color: red;
+    }
+/*阴影盒子box8*/
+.box8>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box8>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box8>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box8:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box8:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box8>.com>.car:hover{
+    	background-color: red;
+    }
+/*阴影盒子box9*/
+.box9>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box9>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box9>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box9:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box9:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box9>.com>.car:hover{
+    	background-color: red;
+    }
+/*阴影盒子box10*/
+   .box10>.com{
+    	position: absolute;
+    	width: 220px;
+    	height: 300px;
+    	visibility:hidden;
+    	margin-top: -300px;
+    }
+    .box10>.com>.car{
+    	position: absolute;
+    	cursor: pointer;
+    	border: 1px solid #FF6700;
+    	border-radius: 50%;
+    	width: 80px;
+    	height: 80px;
+    	margin: 0px 70px;
+    	background-color: #FF6700;
+    }
+    .box10>.com>.car>span{
+    	line-height: 80px;
+    	font-size: 40px;
+    	margin: 0px 15px;
+    	color: white;
+    }
+    .box10:hover .com{
+    	visibility: visible;
+    	background-color: rgba(0,0,0,0.8);
+    	transition: all 0.5s ease-in-out;
+    }
+    .box10:hover .com>.car{
+    	margin-top: 100px;
+    	transition: all 0.5s ease-in-out;
+    }
+    .box10>.com>.car:hover{
+    	background-color: red;
+    }
+
+    #imgbox>.img img{
+    	width: 220px;
+    	height: 300px;
+    }
+    #end{
+    	width: 100%;
+    	height: 550px;
+    }
+    #end img{
+    	width: 100%;
+    	height: 550px;
+    	margin: 50px auto;
+    }

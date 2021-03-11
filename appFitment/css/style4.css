@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	margin: 0 auto;
+		
+	background-color: #f8f8f8;
+	font-size: 13px;				
+}
+#div_box{
+	width: 100%;
+	margin: 0 auto;
+					
+    background-color:#f8f8f8;
+	position: relative;	
+}
+::-webkit-scrollbar {  
+	width: 6px;} /*滚动槽 */
+	::-webkit-scrollbar-track {   
+	border-radius: 10px;
+	}/* 滚动条滑权块 */
+::-webkit-scrollbar-thumb {   
+	border-radius: 10px;     
+	background-color: #b9b9b9;
+}
+#div_top{
+	width: 100%;
+	height: 130px;
+	background: linear-gradient(#2492EB,#F8F8F8);
+	text-align: center;
+    line-height: 30px;
+}
+#div_top a{
+	font-size: 20px;
+	font-weight: 500;
+	text-decoration: none;
+	color: black;
+}
+#div_top svg{
+	width: 5.5em;
+	height: 5.5em;
+}
+#div_ArrangeBox{
+	width: 100%;
+	height: 660px;
+	
+	background-color: #F8F8F8;
+}
+#arrange1,#arrange2,#arrange3,#arrange4,#arrange5{
+	width: 100%;
+	height: 45px;
+	margin-top: 10px;
+	border-top:1px solid #B9B9B9;
+	border-bottom:1px solid #B9B9B9;
+	cursor: pointer;
+}
+#arrange1-left,#arrange2-left,#arrange3-left,#arrange4-left,#arrange5-left{
+	float: left;
+	width: 15%;
+	height: 45px;
+	text-align: center;
+	line-height: 70px;
+}
+#arrange1-right,#arrange2-right,#arrange3-right,#arrange4-right,#arrange5-right{
+	float: left;
+	width: 70%;
+	height: 45px;
+	text-align: left;
+	line-height:45px;
+	font-size: 16px;
+	color: #999;
+}
+.arrange1-right-2{
+	float: left;
+	width: 15%;
+	height: 45px;
+	text-align: right;
+	line-height: 45px;
+	font-size: 20px;
+	color: #999;
+}
+.icon-Module{
+	width:2.5em;
+	height:2.5em;
+}
+#div_statusBar{
+	width: 100%;
+	
+	height: 50px;
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	background-color: #FFFFFF;
+	border-top: 1px solid #B9B9B9;
+}
+#div_statusBar1{
+	width: 25%;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+#div_statusBar1 a{
+	text-decoration: none;
+	color: #515151;
+}
+#div_statusBar2{
+	width: 25%;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+#div_statusBar2 a{
+	text-decoration: none;
+	color: #515151;
+}
+#div_statusBar3{
+	width: 25%;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+#div_statusBar3 a{
+	text-decoration: none;
+	color: #515151;
+}
+#div_statusBar4{
+	width: 25%;
+	height: 50px;
+	float: left;
+	text-align: center;
+}
+#div_statusBar4 a{
+	text-decoration: none;
+	color: #2492EB;
+}
+.icon-bottom{
+	width: 1.6em;
+	height: 1.6em;
+}
