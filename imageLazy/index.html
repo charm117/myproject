@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title> 懒加载</title>
+		<script src="js/IDelayLoad.js"></script>
+		<style type="text/css">
+			img {
+				width: auto;
+				height: auto;
+				margin:5% auto;
+			}
+
+			.con {
+				width: 40%;
+				padding-left: 10%;
+				padding-right: 10%;
+				position: relative;
+				height: auto;
+				margin: auto;
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			.test {
+				width: 420px;
+				height: auto;
+				text-align: center;
+			}
+			.test img{
+				width:320px;
+				height:320px;
+				object-fit: fill;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h3 style="text-align: center">向下滚动才会加载当前可见图片</h3>
+		<div class="con">
+			<img _src="images/u=1131270803,1946211215&fm=11&gp=0.jpg" alt="">
+			<img _src="images/u=129727500,931637201&fm=11&gp=0.jpg" alt="">
+			<img _src="images/u=1514084982,355740847&fm=11&gp=0.jpg "alt="">
+			<img _src="images/u=2451465028,631741128&fm=11&gp=0.jpg" alt="">
+		</div>
+		<div class="con test">
+			<div class="test">
+				<img _src="images/u=2694234202,2169898735&fm=11&gp=0.jpg" alt="">
+				<img _src="images/u=3036285708,414330136&fm=11&gp=0.jpg" alt="">
+			</div>
+			<img _src="images/u=3555558342,116269020&fm=11&gp=0.jpg" alt="">
+			<img _src="images/u=3698987113,3643566227&fm=11&gp=0.jpg" alt="">
+			
+			<img _src="images/u=864314641,2714880815&fm=11&gp=0.jpg" alt="">
+			<img _src="./images/u=129727500,931637201&fm=11&gp=0.jpg" alt="">
+			<img _src="./images/u=3698987113,3643566227&fm=11&gp=0.jpg" alt="">
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		LazyLoad("img", {
+			attr: "_src", //属性名 默认为_src
+			th: 100, //该值最好不要超过图片本身高度，否则无法加载
+		});
+	</script>
+</html>
