@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>封装弹窗</title>
+    <script src="js/rem.js"></script>
+    <style>
+        .btn,
+        .btn2,
+        .btn3 {
+            border: 1px solid #ddd;
+            border-radius: 0.1rem;
+            background: #fff;
+            font-size: 0.24rem;
+            padding: 0.1rem 0.2rem;
+            margin-left: 0.2rem;
+        }
+        
+        a:hover {
+            cursor: pointer;
+        }
+        
+        .tips {
+            background: #eee;
+            color: #333;
+            font-size: 0.12rem;
+            padding: 0.2rem 0;
+            margin: 0.2rem;
+            box-sizing: border-box;
+        }
+        
+        .tips b {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tips pre {
+            white-space: pre-wrap;
+            margin: 0 0 0 -10em;
+        }
+        
+        @media screen and (min-width: 600px) {
+            .tips pre {
+                white-space: pre-wrap;
+                margin: 0 0 0 -5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="btn">单提示</a>
+    <a class="btn2">带标题</a>
+    <a class="btn3">带确认和取消</a>
+    <div class="tips">
+        <b>复制前请选阅读源码，再修改成自己的</b>
+    </div>
+    <div class="tips">
+        <pre>
+            let tips = new ShenTips();
+        </pre>
+    </div>
+    <div class="tips">
+        <pre>
+            tips.tips({
+                msg: "你今天是否更努力了呢？", 
+                time: 500
+            });
+        </pre>
+    </div>
+    <div class="tips">
+        <pre>
+            tips.alert({
+                title: "提示",
+                msg: "你今天是否更努力了呢？", 
+                time: 500, 
+                options: ["是的呢"],
+                confirm: function() { 
+                    console.log("我比昨天更加努力了");
+                }
+            })
+        </pre>
+    </div>
+    <div class="tips">
+        <pre>
+            tips.confirm({
+                title: "请确认",
+                msg: "是否提交",
+                options: ["继续选择", "提交选择"],
+                time: 500,
+                close: false,
+                cancel() {
+                    console.log("点击了取消按钮");
+                },
+                confirm() {
+                    console.log("点击了确认按钮");
+                    that.close();
+                }
+            })
+        </pre>
+    </div>
+
+</body>
+
+</html>
+<script src="js/jquery.3.4.1.js"></script>
+<script src="js/jquery.tips-1.0.2.js"></script>
+
+<script type="text/javascript">
+    let tips = new YangTips();
+    let btn = $(".btn"),
+        btn2 = $('.btn2'),
+        btn3 = $('.btn3');
+    btn.on('click', function() {
+        tips.tips({
+            msg: "你今天是否更努力了呢？",
+            time: 300
+        });
+    });
+    btn2.on('click', function() {
+        tips.alert({
+            title: "提示", // 默认值："提示"，非必填
+            msg: "你今天是否更努力了呢？", // 默认值：""
+            time: 500, // 默认值：500，非必填
+            options: ["是的呢"], // 默认值：['确认']，非必填
+            confirm: function() { // 默认值：""，非必填
+                console.log("我比昨天更加努力了");
+            }
+        })
+    });
+    btn3.on('click', function() {
+        tips.confirm({
+            title: "请确认", // 默认值："提示"，非必填
+            msg: "是否提交", // 默认值：""
+            options: ["继续选择", "提交选择"], // 默认值：['取消', '确认']，非必填
+            time: 500, // 默认值：500，非必填
+            close: false, // 默认值：false，非必填  说明：如果为true，点击确认，关闭该弹窗。
+            cancel() { // 默认值：""，非必填
+                console.log("点击了取消按钮");
+            },
+            confirm() { // 默认值：""，非必填
+                console.log("点击了确认按钮");
+                tips.close(); // 确认后关闭该弹窗
+            }
+        })
+    });
+</script>
